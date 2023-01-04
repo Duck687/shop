@@ -3,13 +3,15 @@ package com.shop.shop.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table
 public class user {
     @Column
     private Long id_user;
     @Column
-    private String name;
+    private String username;
     @Column
     private String surname;
     @Column
@@ -18,12 +20,13 @@ public class user {
     private String password;
     @Column
     private String phone_number;
+
     @Column
     private String role;
 
-    public user(Long id_user, String name, String surname, String mail, String password, String phone_number, String role) {
+    public user(Long id_user, String username, String surname, String mail, String password, String phone_number, String role) {
         this.id_user = id_user;
-        this.name = name;
+        this.username = username;
         this.surname = surname;
         this.mail = mail;
         this.password = password;
@@ -44,12 +47,12 @@ public class user {
         this.id_user = id_user;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getSurname() {

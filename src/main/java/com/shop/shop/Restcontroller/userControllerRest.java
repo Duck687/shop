@@ -1,4 +1,4 @@
-package com.shop.shop.controller;
+package com.shop.shop.Restcontroller;
 
 
 import com.shop.shop.dto.UserDto;

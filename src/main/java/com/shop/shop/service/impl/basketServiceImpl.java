@@ -17,13 +17,13 @@ public class basketServiceImpl implements basketService {
 
     @Override
     public basket createBasket(Long id_basket, Long id_user, Long id_product, Long count_product) {
-        basket Basket = makeBasket(id_basket,id_user,id_product,count_product);
+        basket Basket =  new basket(id_basket,id_user,id_product,count_product);
         return repository.save(Basket);
     }
 
     @Override
     public basket updateBasket(Long id_basket, Long id_user, Long id_product, Long count_product) {
-        basket Basket = makeBasket(id_basket,id_user,id_product,count_product);
+        basket Basket =  new basket(id_basket,id_user,id_product,count_product);
         return repository.save(Basket);
     }
 
@@ -36,8 +36,5 @@ public class basketServiceImpl implements basketService {
     public void deleteBasket(Long id) {
         repository.deleteById(id);
     }
-    private basket makeBasket(Long id_basket, Long id_user, Long id_product, Long count_product)
-    {
-        return new basket(id_basket,id_user,id_product,count_product);
-    }
+
 }
